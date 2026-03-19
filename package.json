@@ -1,5 +1,5 @@
 {
-  "name": "@ezark/devtools-mcp",
+  "name": "devtoolbox-mcp",
   "version": "1.0.0",
   "description": "MCP server providing 25+ developer tools — JSON formatting, encoding, hashing, UUID, JWT, and more. All processing runs locally.",
   "main": "dist/index.js",
