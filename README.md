@@ -4,13 +4,16 @@ MCP server providing 25+ developer tools — JSON formatting, encoding, hashing,
 
 ## Quick Start
 
-### With Claude Code (from GitHub)
+### With Claude Code
 
 ```bash
-# Clone and run
-git clone https://github.com/Rih0z/devtools-mcp.git
-cd devtools-mcp && npm install && npm run build
-claude mcp add devtools-mcp -- node /path/to/devtools-mcp/dist/index.js
+# Option 1: npx (after npm publish)
+claude mcp add devtools-mcp -- npx @ezark/devtools-mcp
+
+# Option 2: From GitHub (works now)
+git clone https://github.com/Rih0z/devtools-mcp.git ~/.local/share/devtools-mcp
+cd ~/.local/share/devtools-mcp && npm install && npm run build
+claude mcp add devtools-mcp -- node ~/.local/share/devtools-mcp/dist/index.js
 ```
 
 ### With Claude Desktop
