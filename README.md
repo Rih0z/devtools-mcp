@@ -72,9 +72,38 @@ Add to `claude_desktop_config.json`:
 | `text_diff` | Compare two texts |
 | `slug_generate` | Generate URL slugs |
 
+## As Claude Code Plugin
+
+```bash
+# Clone and use as plugin
+git clone https://github.com/Rih0z/devtools-mcp
+claude plugin add ./devtools-mcp
+```
+
+The plugin includes a skill file that makes all tools available as background knowledge.
+
+## Features
+
+- **MCP spec compliant**: Proper `isError: true` error handling
+- **RFC 4180 CSV parser**: Handles quoted fields, escaped quotes, CRLF
+- **ReDoS protection**: Pattern and input size limits
+- **YAML type safety**: Quotes ambiguous string values
+- **46 tests passing**: Comprehensive edge case coverage
+- **Zero dependencies** beyond MCP SDK and zod
+
 ## Web Version
 
 All these tools (plus 50 more) are available as a free web app at [usedevtools.com](https://usedevtools.com).
+
+## API
+
+DevToolBox also provides a JSON API for programmatic tool discovery:
+
+```
+GET https://usedevtools.com/api/tools
+GET https://usedevtools.com/api/tools?category=data
+GET https://usedevtools.com/api/tools?q=json
+```
 
 ## License
 
